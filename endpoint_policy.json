@@ -1,0 +1,16 @@
+{
+	"Version": "2012-10-17",
+	"Id": "Policy1695203330909",
+	"Statement": [
+		{
+			"Sid": "Get and Put ",
+			"Effect": "Allow",
+			"Principal": "*",
+			"Action": [
+				"s3:GetObject",
+				"s3:PutObject"
+			],
+			"Resource": "arn:aws:s3:::rds-backup-1-test"
+		}
+	]
+}
