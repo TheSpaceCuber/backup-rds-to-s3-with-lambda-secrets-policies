@@ -1,6 +1,6 @@
 {
 	"Version": "2012-10-17",
-	"Id": "Policy1695203330909",
+	"Id": "AllowGetPutForObjectInS3Bucket",
 	"Statement": [
 		{
 			"Sid": "Get and Put ",
@@ -10,7 +10,7 @@
 				"s3:GetObject",
 				"s3:PutObject"
 			],
-			"Resource": "arn:aws:s3:::rds-backup-1-test"
+			"Resource": "arn:aws:s3:::rds-backup-1-test/*"
 		}
 	]
 }
