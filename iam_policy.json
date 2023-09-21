@@ -1,0 +1,33 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "S3GetAndPut",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Effect": "Allow",
+            "Resource": [
+                "arn:aws:s3:::rds-backup-1-test",
+                "arn:aws:s3:::rds-backup-1-test/*"
+            ]
+        },
+        {
+            "Sid": "KMSDecrypt",
+            "Action": [
+                "kms:Decrypt"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:kms:ap-southeast-1:981991385924:key/3bcb9687-f3d1-45f2-8a1c-b4edd1f5d1fe"
+        },
+        {
+            "Sid": "SecretsManagerGetSecret",
+            "Action": [
+                "secretsmanager:GetSecretValue"
+            ],
+            "Effect": "Allow",
+            "Resource": "arn:aws:secretsmanager:ap-southeast-1:981991385924:secret:database-1-secret-711YgL"
+        }
+    ]
+}
